@@ -1,0 +1,21 @@
+#+title: semi-supervised learning series
+#+author: Qiang
+
+** What is semi-supervised learning [copy from https://github.com/wohlert/semi-supervised-pytorch]
+Semi-supervised learning tries to bridge the gap between supervised and unsupervised learning by learning from both *labelled* and *unlabelled* data.
+
+Semi-supervised learning can typically be applied to areas where data is easy to get a hold of, but labelling is expensive. Normally, one would either use an unsupervised method, or just the few labelled examples - both of which would be likely to yield bad results.
+
+** 进展
+- The current state-of-the-art method in semi-supervised learning achieves an accuracy of over 99% on the MNIST dataset using just 10 labelled examples per class.
+
+
+** 论文记录
+-
+
+- [ICLR17]β-VAE: LEARNINGBASICVISUALCONCEPTS WITH ACONSTRAINEDVARIATIONALFRAMEWORK
+  - [[https://openreview.net/pdf?id=Sy2fzU9gl][arxiv]]
+  - 个人总结
+
+- [2016]InfoGAN
+  -
