@@ -1,0 +1,7 @@
+- latent representation/channel_capacity
+
+- disentangled representation
+  - disentangled representation can be defined as one where singlelatent units are sensitive to changes in single generative factors, while being relatively invariant tochanges in other factors (Bengio et al., 2013).
+
+- zero-shot inference
+  - reasoning about new data is enabled by recombining previously learnt factors

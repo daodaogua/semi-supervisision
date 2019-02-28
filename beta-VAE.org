@@ -1,0 +1,33 @@
+#+title: β-VAE个人总结
+#+author: Qiang
+
+** 研究现状概述
+  - 研究目标
+    - unsupervision
+  - 实现情况
+    - VAE: variational autoencoder
+    - InfoGAN
+      - instable
+      - reduce sample diversity
+      - prior knowlege
+        - the choice of the prior distribution
+        - the number of the regularised noise variabl
+      - lack the principled inference network
+      - maybe a right direction
+  - 遇到的问题
+
+** 做出的主要贡献
+- β-VAE
+  - a unsupervised approach for learning disentangled presentation
+- a method which can measure the degree of disentanglement
+
+** beta-VAE
+- 在VAE的loss function的KL分量中,乘以了beta系数
+
+- 实现效果
+- 存在的问题
+- 思考
+- 关键细节
+  - 模型
+  - 函数
+  - 定义
