@@ -11,11 +11,28 @@ Semi-supervised learning can typically be applied to areas where data is easy to
 
 
 ** 论文记录
--
+- [[./structures.png]]
+
+- [14]VAE
+  - [[https://arxiv.org/pdf/1312.6114.pdf][arxiv]]
+  - [[https://github.com/bojone/vae/blob/master/vae_keras.py][VAE-keras-github库]]
+  - [[./VAE/ori-VAE.org][个人总结]]
 
 - [ICLR17]β-VAE: LEARNINGBASICVISUALCONCEPTS WITH ACONSTRAINEDVARIATIONALFRAMEWORK
   - [[https://openreview.net/pdf?id=Sy2fzU9gl][arxiv]]
-  - 个人总结
+  - [[./beta-VAE/beta-VAE.org][个人总结]]
+
+- [2015]DC-IGN
+  - [[https://arxiv.org/pdf/1503.03167.pdf][arxiv]]
+  - [[https://github.com/willwhitney/dc-ign][DC-IGN-lua-github库]]
+  - [[./DC-IGN/DC-IGN.org][个人总结]]
 
 - [2016]InfoGAN
-  -
+  - [[https://arxiv.org/pdf/1606.03657.pdf][arxiv]]
+  - [[https://github.com/openai/InfoGAN][InfoGAN-tensorflow-github库]]
+  - [./InfoGAN/InfoGAN.org][个人总结]
+
+- PPGAN
+
+- CVAE-GAN
+  - [[https://arxiv.org/pdf/1703.10155.pdf][arxiv]]

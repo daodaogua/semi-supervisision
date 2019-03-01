@@ -1,0 +1,36 @@
+#+title: DC-IGN
+#+author: Qiang
+
+
+- 研究现状概述
+  - 研究目标
+    - 得到disentangled latent representation
+  - 实现情况
+  - 遇到的问题
+- 做出的主要贡献
+
+- graphics codes
+  - 图像领域经验指定的feature,文中选了光线,脸部角度,pose等.
+  - 体现这些codes的方法是,在一个minibatch中只有一个code变化,其他是一致的.文中称active,inactive
+
+- [[./DC-IGN_structure.png][DC-IGN模型结构]]
+
+- [[./loss_function.png][loss function]]
+
+- [[latent_representation_Z.png][latent representation Z 的求取方法]]
+
+- [[./training_process.png][模型的训练流程]]
+
+
+
+- 实现效果
+  - disentangled latent representation 效果很好,beta-VAE中有体现
+- 存在的问题
+  - 需要领域知识
+  - 数据挑选工作量比较大
+- 思考
+  - 对batch数据进行精确挑选,能对模型进行定向训练
+- 关键细节
+  - 模型
+  - 函数
+  - 定义

@@ -1,0 +1,41 @@
+#+title: InfoGAN
+#+author: Qiang
+
+
+- 研究现状概述
+  - 研究目标
+    - still be a target which aim at extracting disentangled representation.
+    - under unsupervision
+  - 实现情况
+  - 遇到的问题
+- 做出的主要贡献
+  - InfoGAN
+    - augmented with a mutual information cost
+
+- InfoGAN
+  - [[./model_structure.png][model structure]]
+  - c可以人为设定
+
+- a mutual information cost
+  - mutual information arised from information theory
+    - aim to represent the denpendency between two inputs
+    - [[./mutual_information.png][definition]]
+  - the completed cost function
+    - [[./cost_funtion.png][cost function]]
+    - the second item
+  - modified cost function
+    - [['/modified_cost_function.png][modified_cost_function]]
+    - [[./L1.png][L1]]
+
+- lower bounding mutual information: [Variational Information Maximization]
+
+- 实现效果
+- 存在的问题
+- 思考
+  - 信息论
+  - 贝叶斯
+  - 结构复用
+- 关键细节
+  - 模型
+  - 函数
+  - 定义
