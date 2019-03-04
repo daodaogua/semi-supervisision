@@ -30,9 +30,11 @@ Semi-supervised learning can typically be applied to areas where data is easy to
 - [2016]InfoGAN
   - [[https://arxiv.org/pdf/1606.03657.pdf][arxiv]]
   - [[https://github.com/openai/InfoGAN][InfoGAN-tensorflow-github库]]
-  - [./InfoGAN/InfoGAN.org][个人总结]
+  - [[./InfoGAN/InfoGAN.org][个人总结]]
 
-- PPGAN
+- [2016]PPGN
+  - [[https://arxiv.org/pdf/1612.00005.pdf][arxiv]]
+  - [[https://github.com/Evolving-AI-Lab/ppgn][PPGN-caffe-github库]]
 
-- CVAE-GAN
+- [2017]CVAE-GAN
   - [[https://arxiv.org/pdf/1703.10155.pdf][arxiv]]

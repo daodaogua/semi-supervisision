@@ -5,3 +5,6 @@
 
 - zero-shot inference
   - reasoning about new data is enabled by recombining previously learnt factors
+
+- energy function
+  -
