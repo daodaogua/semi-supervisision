@@ -14,13 +14,23 @@ Semi-supervised learning can typically be applied to areas where data is easy to
 - [[./structures.png]]
 
 - [14]VAE
+  - 图像生成中的一类方法
+    - 贝叶斯核心
+    - latent representation由Gaussian分布得到
+    - Gaussian分布的mean,variation由模型学得
+    - loss为原模型和生成模型的l2
+    - 约束Gaussian分布为正态分布
+    - 对抗理念
   - [[https://arxiv.org/pdf/1312.6114.pdf][arxiv]]
   - [[https://github.com/bojone/vae/blob/master/vae_keras.py][VAE-keras-github库]]
   - [[./VAE/ori-VAE.org][个人总结]]
 
 - [ICLR17]β-VAE: LEARNINGBASICVISUALCONCEPTS WITH ACONSTRAINEDVARIATIONALFRAMEWORK
+  - 同VAE的差别,增加了β参数,加强normalization constraint
   - [[https://openreview.net/pdf?id=Sy2fzU9gl][arxiv]]
   - [[./beta-VAE/beta-VAE.org][个人总结]]
+
+
 
 - [2015]DC-IGN
   - [[https://arxiv.org/pdf/1503.03167.pdf][arxiv]]
@@ -38,3 +48,63 @@ Semi-supervised learning can typically be applied to areas where data is easy to
 
 - [2017]CVAE-GAN
   - [[https://arxiv.org/pdf/1703.10155.pdf][arxiv]]
+
+- [NIPS2017]Good Semi-Supervised Learning that Requires a Bad GAN
+  - 如题,semi-supervision考虑将C和D分开
+  - [[https://arxiv.org/pdf/1705.09783.pdf][arxiv]]
+
+- [ICLR18]Meta-Learning for Semi-Supervised Few-Shot Classification
+  - [[https://arxiv.org/pdf/1803.00676.pdf][arxiv]]
+
+- [NIPS17]Mean teachers are better role models
+  - 类似于Actor-Criticor的结构,但不是解决数据相关性的问题,可能类似于学习速率约束
+  - exponential moving average能够增加模型的noise.
+  - [[https://arxiv.org/pdf/1703.01780.pdf][arxiv]]
+
+- [ICLR18]Spectral Normalization
+  - 基于continuity
+  - weight矩阵的singular value约束
+  - 可以通过查看D或G的weight singular value,判断D or G的收敛情况(突然变大)
+  - [[https://arxiv.org/pdf/1802.05957v1.pdf][arxiv]]
+  - [][个人总结]
+
+- [ICLR19]BigGAN
+  - 给予SN的工作
+  - 模型越大(width,z_size...),图片生成效果越好,甚至高清图片
+  - 给出了一些trick和具体的模型实例
+  - [[https://arxiv.org/pdf/1809.11096.pdf][arxiv]]
+  - [][个人总结]
+
+- [2019]S3GAN
+  - 基于BigGAN
+  - 很多学习方法的叠加
+    - self-supervision
+    - semi-supervision
+    - pretrain
+    - clustering
+    - supervision
+    - GAN
+  - [[https://arxiv.org/pdf/1903.02271.pdf][arxiv]]
+  - [][arxiv]
+
+- self-supervised learning
+  - [2018]rotation angle
+    - 简单实用的自学习方法
+    - pretext learning task为图片的旋转角度(4个最好)
+    - [[https://arxiv.org/pdf/1803.07728.pdf][arxiv]]
+    - [][个人总结]
+    - [[https://github.com/gidariss/FeatureLearningRotNet][rotnet-pytorch-github库]]
+  - [2019]Revisiting Self-Supervised Visual Representation Learning
+    - 研究模型结构对self-supervised的影响
+    - 研究了多种结构,多种自学习方式,得到效果图
+    - 发现skip-connection对一般representation向模型末端传递有帮助
+    - [[https://arxiv.org/pdf/1901.09005.pdf][arxiv]]
+
+- semi-supervise learning
+  - [2017]triple-GAN
+    - D和C分开
+    - D的输入为x,y
+    - C,G的学习有正相关性[论文论点]
+    - 三方game
+    - http://120.52.51.18/papers.nips.cc/paper/6997-triple-generative-adversarial-nets.pdf
+    - [][个人总结]
