@@ -1,0 +1,32 @@
+#+title: S3GAN个人总结
+#+author: Qiang
+
+*** 主要贡献
+- 研究并提出减少标签生成模型.
+  - 研究多个方法
+    - 无监督
+      - random label 给Generator
+      - 自监督后 + 小批量聚类
+    - 自监督
+      - rotation angle
+    - 半监督
+      - 自监督后 + subset label分类器
+    - conditional GAN
+    - 高可信度GAN
+      - BigGan
+  - 融合到一起
+
+
+*** 自学习算法
+- 目标
+  - 得到提取特征模型
+
+*** 条件GAN
+- Discriminator与Classifier共用模型结构,能够达到平衡
+
+
+
+*** 思考
+- 预训练
+- 多模型融合
+- 随机标签,使的Generator有随机性

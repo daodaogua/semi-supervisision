@@ -1,0 +1,11 @@
+#+title: rotation angle self supervision个人总结
+#+author: Qiang
+
+*** 文章贡献
+- rotation angle的方法提取semantic representation.
+  - 操作简单
+- 对方法进行充分测试
+
+*** 思考
+- 更改输入数据的特性,作为监督学习的标签,使学习中学得原始数据的semantic representation.
+  - 图像的geometric transformation使用rotation简单容易, 可能还有别的特征.

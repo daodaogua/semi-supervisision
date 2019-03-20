@@ -1,0 +1,22 @@
+#+title: triple GAN 个人总结
+#+author: Qiang
+
+*** 文章贡献
+- 提出triple-GAN,用于semi-supervision
+  - classifer 和 discrimator 分开
+- analyze the problems in existing SSL GANs
+  - the generator and the discriminator (i.e.  the classifier) may not be optimal at the same time
+  - he generator cannot control the semantics of the generated samples
+
+*** triple-GAN
+- D input: x,y; x,yc; xg,y
+- C 有同时的监督训练
+- C的优化,能够带动G的优化
+
+- tricks
+  - unlabeled data 使用C得到label,作为x,y
+    - C收敛快,可行
+  - 对SSL,C而言
+    - 增加C的confidence loss,类似info entropy
+    - consistency loss,对unlabeled data 增加noise,是其保持相同label
+  - 优化梯度计算?

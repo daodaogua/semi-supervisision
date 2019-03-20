@@ -1,0 +1,9 @@
+#+title: Spectral Normalization
+#+author: Qiang
+
+*** 主要工作
+- 根据Lipschitz continuity 提出spectral normalization对D weight的约束
+  - 基于原始Lipschitz continuity约束技术的改进,能够脱离仅对x,x'施加约束
+
+*** 思考
+- 监测,weight的最大奇异值,能够知道GAN模型的收敛情况

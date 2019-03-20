@@ -1,0 +1,15 @@
+#+title: revisiting self-supervised visual representation learning
+#+author: Qiang
+
+*** 文章目标
+- 研究现有self-supervision构架下,除了研究pretext task, 调整model结构是否能够提升用于downstream task的representation质量
+
+
+*** 文章贡献
+- model结构的选择在self-supervision任务中非常重要
+  - 不同pretext task可能适合不同模型结构
+- 模型容量增大,对representation一般表示能力的提升有帮助
+  - model width
+  - representation size
+- skip-connection对一般representation向模型末端传递有帮助
+  - representation需要挑选Layer,而skip-connection结构可能不需要对layer挑选

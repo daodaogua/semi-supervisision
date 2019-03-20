@@ -1,0 +1,31 @@
+#+title: BigGan个人总结
+#+author: Qiang
+
+*** 研究目的
+- 在提升生成图片resolution的目标下
+  - 研究提升图片质量和多样性(FID,IS)
+  - 当resolution提高时,训练更容易不稳定的原因,稳定化的方法
+
+*** 研究进展
+- 针对objective function
+- 针对D的梯度惩罚
+  - Spectral Normalization本文最为相关内容
+- 模型结构
+  - SA-GAN
+  - PPGAN
+- conditional GANs
+- evaluation of generative models
+
+*** 本文贡献
+- 证明大幅提升GAN模型容量可以提升生成模型的效果
+  - batch size
+  - width(number of channels)
+- truncation trick
+  - truncation of latent representation, trade off between FID and IS
+  - use Orthogonal Regularization
+- analyze the instabilities specific to large scale GANs, state complete training stability can only be achieved at a dramatic cost to perfermance
+  - weights' singular values
+  - similar result with in R1
+  - PPGAN is not neccessary
+  - trade off
+  - save the models before collapse
