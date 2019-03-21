@@ -10,9 +10,60 @@ Semi-supervised learning can typically be applied to areas where data is easy to
 - The current state-of-the-art method in semi-supervised learning achieves an accuracy of over 99% on the MNIST dataset using just 10 labelled examples per class.
 
 
-** 论文记录
-- [[./structures.png]]
+** 研究线路
+- 单纯latent特征提取(unlabeled)
+  - data generation(restoration)
+    - encoder(probability)
+      - 挑选数据辅助
+        - DC-IGN
+      - 未挑选数据辅助
+        - VAE
+        - β-VAE
+    - GAN
+    - encoder + GAN
+      - InfoGAN
+  - 自学习算法
+    - rotation angle
+    - Revisiting Self-Supervised Visual Representation Learning
+- 分类任务和特征提取合作
+  - encoder
+    - PPGN
+  - GAN
+    - triplegan
+  - encoder + GAN
+    - CVAE+GAN
+  - 其他
+    - noise
+- 多种方法混合
+  - S3GAN
+- 补充
+  - [[./structures.png]]
 
+*** 训练C的方法
+  - 监督学习
+  - D的博弈
+    - tripleGAN
+  - 增加数据标签
+    - 带标签生成的图片
+    - 人工参与
+  - 增强C的确定性
+  - 辅助任务,提升C提取特征的能力
+    - 训练过程
+      - 预训练/迁移学习
+      - 同步训练
+    - 方法
+      - 共享D
+      - 共享E
+      - 自学习任务
+
+*** tricks[个人]
+- 越多越好
+- 模型容量大
+- 辅助与博弈
+- skip connection
+
+
+** 论文记录
 - [14]VAE
   - 图像生成中的一类方法
     - 贝叶斯核心
@@ -47,6 +98,7 @@ Semi-supervised learning can typically be applied to areas where data is easy to
   - [[https://github.com/Evolving-AI-Lab/ppgn][PPGN-caffe-github库]]
 
 - [2017]CVAE-GAN
+  - 加标签生成图像辅助训练C
   - [[https://arxiv.org/pdf/1703.10155.pdf][arxiv]]
 
 - [NIPS2017]Good Semi-Supervised Learning that Requires a Bad GAN
@@ -59,6 +111,7 @@ Semi-supervised learning can typically be applied to areas where data is easy to
 - [NIPS17]Mean teachers are better role models
   - 类似于Actor-Criticor的结构,但不是解决数据相关性的问题,可能类似于学习速率约束
   - exponential moving average能够增加模型的noise.
+  - label和unlabel 通过 共用同一个student共同优化
   - [[https://arxiv.org/pdf/1703.01780.pdf][arxiv]]
 
 - [ICLR18]Spectral Normalization
@@ -105,6 +158,6 @@ Semi-supervised learning can typically be applied to areas where data is easy to
     - D和C分开
     - D的输入为x,y
     - C,G的学习有正相关性[论文论点]
-    - 三方game
+    - 三方game博弈;加标签生成图像辅助训练;Info最大化
     - http://120.52.51.18/papers.nips.cc/paper/6997-triple-generative-adversarial-nets.pdf
     - [][个人总结]
